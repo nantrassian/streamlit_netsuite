@@ -55,7 +55,7 @@ else:
 
             latest_cash_data = metrics_data[
                 (metrics_data['accounting_period_ending'] == latest_date) &
-                metrics_data['account_name'].str.lower().str.contains('cash and cash equivalents', case=False, na=False)
+                metrics_data['account_name'].str.lower().str.contains('bank', case=False, na=False)
             ]
 
             latest_inventory_data = metrics_data[
@@ -194,8 +194,8 @@ else:
             # Convert accounting_period_ending to datetime
             cash_data['accounting_period_ending'] = pd.to_datetime(cash_data['accounting_period_ending'])
 
-            # Filter rows that contain "Cash and Cash Equivalents" in the account_name
-            cash_data = cash_data[cash_data['account_name'].str.lower().str.contains('cash and cash equivalents')]
+            # Filter rows that contain "Bank" in the account_name
+            cash_data = cash_data[cash_data['account_name'].str.lower().str.contains('bank')]
 
             # Convert balance column to float
             cash_data['balance'] = cash_data['balance'].astype(float)

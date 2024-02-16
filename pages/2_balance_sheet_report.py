@@ -1,5 +1,6 @@
 import streamlit as st
 import plost
+import variables
 import pandas as pd
 import numpy as np
 from datetime import datetime

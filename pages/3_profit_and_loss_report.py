@@ -1,4 +1,5 @@
 import streamlit as st
+import variables
 import plost
 import pandas as pd
 import numpy as np

@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from functions.filters import date_filter, filter_data
-from functions.variables import database_schema_variables, destination_selection
+#from functions.variables import database_schema_variables, destination_selection
 
 st.sidebar.header('Data Connection Variables')
 destination = DESTINATION

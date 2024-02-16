@@ -6,7 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 from functions.filters import date_filter, filter_data, extract_second_item
-from functions.variables import database_schema_variables, destination_selection
+#from functions.variables import database_schema_variables, destination_selection
 from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')

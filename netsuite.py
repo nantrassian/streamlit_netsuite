@@ -1,5 +1,5 @@
 import streamlit as st
-from functions.variables import database_schema_variables, destination_selection
+#from functions.variables import database_schema_variables, destination_selection
 
 st.sidebar.header('Data Connection Variables')
 destination = DESTINATION

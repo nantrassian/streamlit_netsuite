@@ -1,10 +1,10 @@
 import streamlit as st
-import variables
+import functions.variables
 #from functions.variables import database_schema_variables, destination_selection
 
 st.sidebar.header('Data Connection Variables')
-destination = variables.DESTINATION
-database, schema = variables.DATABASE, variables.SCHEMA
+destination = functions.variables.DESTINATION
+database, schema = functions.variables.DATABASE, functions.variables.SCHEMA
 
 # Read the README contents
 with open("README.md", "r") as f:

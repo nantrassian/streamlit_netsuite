@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime, timedelta
+import variables
 from functions.query import query_results
 
 def date_filter(dest, db, sc, md='bs', k=1):

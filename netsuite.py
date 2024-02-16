@@ -1,4 +1,5 @@
 import streamlit as st
+import variables
 #from functions.variables import database_schema_variables, destination_selection
 
 st.sidebar.header('Data Connection Variables')

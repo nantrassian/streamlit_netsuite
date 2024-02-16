@@ -10,8 +10,8 @@ from functions.filters import date_filter, filter_data, extract_second_item
 from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
-destination = DESTINATION
-database, schema = DATABASE, SCHEMA
+destination = variables.DESTINATION
+database, schema = variables.DATABASE, variables.SCHEMA
 
 st.title('Financial Executive Dashboard')
 

@@ -1,7 +1,7 @@
 import streamlit as st
 import plost
 import pandas as pd
-import variables
+import functions.variables
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
@@ -11,8 +11,8 @@ from functions.filters import date_filter, filter_data, extract_second_item
 from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
-destination = variables.DESTINATION
-database, schema = variables.DATABASE, variables.SCHEMA
+destination = functions.variables.DESTINATION
+database, schema = functions.variables.DATABASE, functions.variables.SCHEMA
 
 st.title('Financial Executive Dashboard')
 

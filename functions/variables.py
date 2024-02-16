@@ -5,3 +5,4 @@ import streamlit as st
 # Set default values to your BigQuery database and schema
 DATABASE = 'fivetranintegration-393217'
 SCHEMA = 'netsuite_suiteanalytics'
+DESTINATION = 'BigQuery'

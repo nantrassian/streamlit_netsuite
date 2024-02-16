@@ -10,8 +10,8 @@ from functions.variables import database_schema_variables, destination_selection
 from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
-destination = destination_selection()
-database, schema = database_schema_variables()
+destination = DESTINATION
+database, schema = DATABASE, SCHEMA
 
 st.title('Financial Executive Dashboard')
 

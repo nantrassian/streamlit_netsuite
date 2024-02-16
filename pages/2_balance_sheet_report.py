@@ -65,6 +65,9 @@ else:
 
                         # Custom title that includes account type name and its total sum
                         expander_title = f"{account_type}: {subtotal_account_type}"
+
+                        # Sort the account_type_data by balance in descending order
+                        account_type_data = account_type_data.sort_values(by='balance', ascending=False)
                         
                         # Create an expander for each account_type_name within the account_category
                         with st.expander(expander_title):

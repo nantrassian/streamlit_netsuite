@@ -1,5 +1,5 @@
 import streamlit as st
-import variables
+import functions.variables
 import plost
 import pandas as pd
 import numpy as np
@@ -10,8 +10,8 @@ from functions.filters import date_filter, filter_data
 from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
-destination = variables.DESTINATION
-database, schema = variables.DATABASE, variables.SCHEMA
+destination = functions.variables.DESTINATION
+database, schema = functions.variables.DATABASE, functions.variables.SCHEMA
 
 st.title('Profit and Loss Dashboard')
 

@@ -4,9 +4,9 @@ from google.oauth2 import service_account
 from google.cloud import bigquery
 
 # Grab global variables
-destination = st.session_state.destination
-database = st.session_state.database 
-schema = st.session_state.schema
+destination = DESTINATION
+database = DATABASE
+schema = SCHEMA
 
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.

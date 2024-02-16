@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
+import variables
 from google.oauth2 import service_account
 from google.cloud import bigquery
 
 # Grab global variables
-destination = DESTINATION
-database = DATABASE
-schema = SCHEMA
+destination = variables.DESTINATION
+database = variables.DATABASE
+schema = variables.SCHEMA
 
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.

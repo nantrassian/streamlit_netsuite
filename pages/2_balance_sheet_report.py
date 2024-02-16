@@ -7,8 +7,8 @@ from functions.filters import date_filter, filter_data
 #from functions.variables import database_schema_variables, destination_selection
 
 st.sidebar.header('Data Connection Variables')
-destination = DESTINATION
-database, schema = DATABASE, SCHEMA
+destination = variables.DESTINATION
+database, schema = variables.DATABASE, variables.SCHEMA
 
 st.title('Balance Sheet Dashboard')
 

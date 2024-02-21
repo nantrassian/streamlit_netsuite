@@ -6,3 +6,6 @@ import streamlit as st
 DATABASE = 'fivetranintegration-393217'
 SCHEMA = 'netsuite_suiteanalytics_netsuite'
 DESTINATION = 'BigQuery'
+def database_schema_variables():
+        st.session_state.database = DATABASE
+        st.session_state.schema = SCHEMA

@@ -74,12 +74,12 @@ else:
             with col1:
                 working_capital = current_assets - current_liabilities
                 formatted_working_capital = "${:,.2f}".format(working_capital)
-                st.metric("Working Capital", formatted_working_capital, delta_color="normal", help=None, label_visibility="visible")
+                st.metric("Working Capital", formatted_working_capital, delta=None, delta_color="normal", label_visibility="visible")
 
             with col2:
                 cash_balance = latest_cash_data['balance'].astype(float).sum()
                 formatted_cash_balance = "${:,.2f}".format(cash_balance)
-                st.metric("Cash Balance", formatted_cash_balance, delta=None, delta_color="normal", help=None, label_visibility="visible")
+                st.metric("Cash Balance", formatted_cash_balance, delta=None, delta_color="normal", label_visibility="visible")
 
             metric_df = is_data_date_filtered.copy()
             # Convert balance to float for calculations

@@ -74,7 +74,7 @@ else:
             with col1:
                 working_capital = current_assets - current_liabilities
                 formatted_working_capital = "${:,.2f}".format(working_capital)
-                st.metric("Working Capital", formatted_working_capital, delta=None, delta_color="normal", help=None, label_visibility="visible")
+                st.metric("Working Capital", formatted_working_capital, delta_color="normal", help=None, label_visibility="visible")
 
             with col2:
                 cash_balance = latest_cash_data['balance'].astype(float).sum()

@@ -12,7 +12,7 @@ from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
 destination = functions.variables.DESTINATION
-database, schema = functions.variables.DATABASE, functions.variables.SCHEMA
+database, schema = functions.variables.database_schema_variables()
 
 st.title('Financial Executive Dashboard')
 

@@ -9,3 +9,4 @@ DESTINATION = 'BigQuery'
 def database_schema_variables():
         st.session_state.database = DATABASE
         st.session_state.schema = SCHEMA
+return DATABASE, SCHEMA

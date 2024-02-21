@@ -9,7 +9,7 @@ from functions.filters import date_filter, filter_data
 
 st.sidebar.header('Data Connection Variables')
 destination = functions.variables.DESTINATION
-database, schema = functions.variables.DATABASE, functions.variables.SCHEMA
+database, schema = database_schema_variables()
 
 st.title('Balance Sheet Dashboard')
 

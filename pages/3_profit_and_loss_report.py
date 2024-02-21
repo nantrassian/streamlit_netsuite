@@ -11,7 +11,7 @@ from functions.query import query_results
 
 st.sidebar.header('Data Connection Variables')
 destination = functions.variables.DESTINATION
-database, schema = database_schema_variables()
+database, schema = functions.variables.database_schema_variables()
 
 st.title('Profit and Loss Dashboard')
 

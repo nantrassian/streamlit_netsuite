@@ -74,12 +74,12 @@ else:
             with col1:
                 working_capital = current_assets - current_liabilities
                 formatted_working_capital = "${:,.2f}".format(working_capital)
-                st.metric("Working Capital", formatted_working_capital, delta=None, delta_color="normal")
+                st.metric("Working Capital", formatted_working_capital, delta=None, delta_color="normal", help=None, label_visibility="visible")
 
             with col2:
                 cash_balance = latest_cash_data['balance'].astype(float).sum()
                 formatted_cash_balance = "${:,.2f}".format(cash_balance)
-                st.metric("Cash Balance", formatted_cash_balance, delta=None, delta_color="normal")
+                st.metric("Cash Balance", formatted_cash_balance, delta=None, delta_color="normal", help=None, label_visibility="visible")
 
             metric_df = is_data_date_filtered.copy()
             # Convert balance to float for calculations
@@ -105,11 +105,11 @@ else:
             col1, col2 = st.columns(2)
             with col1:
                 formatted_revenue = "${:,.2f}".format(revenue)
-                st.metric("Revenue", formatted_revenue, delta=None, delta_color="normal", help=None)
+                st.metric("Revenue", formatted_revenue, delta=None, delta_color="normal", help=None, label_visibility="visible")
             with col2:
                 adj_opp_expense = opp_expense * -1
                 formatted_opp_expense = "${:,.2f}".format(adj_opp_expense)
-                st.metric("Operating Expenses", formatted_opp_expense, delta=None, delta_color="normal", help=None)
+                st.metric("Operating Expenses", formatted_opp_expense, delta=None, delta_color="normal", help=None, label_visibility="visible")
             
             st.markdown("---")
 

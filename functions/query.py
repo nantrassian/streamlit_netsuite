@@ -11,7 +11,7 @@ schema = functions.variables.SCHEMA
 
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
+@st.cache_resource(ttl=600)
 def run_query(query):
     # Create API client.
     credentials = service_account.Credentials.from_service_account_info(

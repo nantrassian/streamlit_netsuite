@@ -242,7 +242,7 @@ else:
             current_ratio = current_assets / current_liabilities if current_liabilities != 0 else 0
             quick_ratio = (current_assets - inventory) / current_liabilities if current_liabilities != 0 else 0
             liquid_assets = latest_cash_data['balance'].astype(float).sum()
-            liquidity_ratio = liquid_assets / current_liabilities if current_liabilities != 0 else 0
+            cash_ratio = liquid_assets / current_liabilities if current_liabilities != 0 else 0
             
             with col3:
                 formatted_current_ratio = "{:,.2f}%".format(current_ratio)
@@ -251,7 +251,7 @@ else:
                 formatted_quick_ratio = "{:,.2f}%".format(quick_ratio)
                 st.metric("Quick Ratio", formatted_quick_ratio, delta=None, delta_color="normal", help=None, label_visibility="visible")
             with col5:
-                formatted_liquidity_ratio = "{:,.2f}%".format(liquidity_ratio)
-                st.metric("Liquidity Ratio", formatted_liquidity_ratio, delta=None, delta_color="normal", help=None, label_visibility="visible")
+                formatted_liquidity_ratio = "{:,.2f}%".format(cash_ratio)
+                st.metric("Cash Ratio", formatted_liquidity_ratio, delta=None, delta_color="normal", help=None, label_visibility="visible")
         else:
             st.warning("Please ensure your starting period is before your ending period.")
